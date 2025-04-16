@@ -1,0 +1,113 @@
+:root {
+    --bg-light: #f9fafb;
+    --bg-dark: #1f2937;
+    --text-light: #111827;
+    --text-dark: #f3f4f6;
+    --primary: #6366f1;
+    --card-light: #ffffff;
+    --card-dark: #374151;
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  body.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+
+  .dashboard {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    height: 100vh;
+  }
+
+  .sidebar {
+    background: var(--card-light);
+    padding: 2rem 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s;
+  }
+
+  body.dark .sidebar {
+    background: var(--card-dark);
+  }
+
+  .sidebar h2 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    color: inherit;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: background 0.3s;
+  }
+
+  .nav-link:hover {
+    background-color: var(--primary);
+    color: white;
+  }
+
+  .content {
+    padding: 2rem;
+    overflow-y: auto;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  .charts {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .card {
+    background: var(--card-light);
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s;
+  }
+
+  body.dark .card {
+    background: var(--card-dark);
+  }
+
+  .toggle-mode {
+    background: none;
+    border: 1px solid var(--text-light);
+    color: inherit;
+    border-radius: 999px;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  body.dark .toggle-mode {
+    border-color: var(--text-dark);
+  }
+
+  @media (max-width: 768px) {
+    .dashboard {
+      grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+      display: none;
+    }
+  }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InsightVista Dashboard</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <div class="dashboard">
+    <div class="sidebar">
+      <h2>InsightVista</h2>
+      <a href="#" class="nav-link">Dashboard</a>
+      <a href="#" class="nav-link">Reports</a>
+      <a href="#" class="nav-link">Analytics</a>
+      <a href="#" class="nav-link">Settings</a>
+    </div>
+
+    <div class="content">
+      <div class="header">
+        <h1>Welcome back 👋</h1>
+        <button class="toggle-mode" onclick="toggleDarkMode()">Toggle Mode</button>
+      </div>
+
+      <div class="charts">
+        <div class="card">
+          <h3>Users Over Time</h3>
+          <canvas id="lineChart"></canvas>
+        </div>
+        <div class="card">
+          <h3>Revenue Breakdown</h3>
+          <canvas id="doughnutChart"></canvas>
+        </div>
+        <div class="card">
+          <h3>Growth</h3>
+          <canvas id="barChart"></canvas>
+        </div>
+        <div class="card">
+          <h3>Device Usage</h3>
+          <canvas id="pieChart"></canvas>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
